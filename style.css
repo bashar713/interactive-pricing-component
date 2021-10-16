@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  --Soft-Cyan-Full-Slider-Bar: hsl(174, 77%, 80%);
+  --Strong-Cyan-Slider-Backround: hsl(174, 86%, 45%);
+  --Light-Grayish-Red-Discount-Background-: hsl(14, 92%, 95%);
+  --Light-Red-Discount-Text: hsl(15, 100%, 70%);
+  --Pale-Blue-CTA-Text: hsl(226, 100%, 87%);
+
+  --White-Pricing-Component-Background-: hsl(0, 0%, 100%);
+  --Very-Pale-Blue-Main-Background: hsl(230, 100%, 99%);
+  --Light-Grayish-Blue-Empty-Slider-Bar: hsl(224, 65%, 95%);
+  --Light-Grayish-Blue-Toggle-Background: hsl(223, 50%, 87%);
+  --Grayish-Blue-Text: hsl(225, 20%, 60%);
+  --Dark-Desaturated-Blue-Text-CTA-Background: hsl(227, 35%, 25%);
+
+  --Font-family: 'Manrope', sans-serif;
+  --Font-600: 600;
+  --Font-700: 700;
+  --Font-size: 15px;
+
+}
+
+
+
+/*!-----------------*/
+body {
+  font-family: var(--Font-family);
+  background-color: var(--Very-Pale-Blue-Main-Background);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--Light-Grayish-Blue-Empty-Slider-Bar);
+  margin: 1rem 0 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-title {
+  font-size: 1.4rem;
+  color: var(--Dark-Desaturated-Blue-Text-CTA-Background);
+}
+
+.sub-text {
+  color: var(--Grayish-Blue-Text);
+}
+
+.slider {
+  -webkit-appearance: none;
+  height: 10px;
+  order: 2;
+  border-radius: 5px;
+  background: var(--Light-Grayish-Blue-Empty-Slider-Bar);
+  outline: none;
+  margin: 2rem auto;
+  width: 90%;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 45px;
+  height: 45px;
+  border: 0;
+  background: url('/images/icon-slider.svg') no-repeat, var(--Strong-Cyan-Slider-Backround);
+  border-radius: 100%;
+  background-position: center;
+  background-size: 75%;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px 5px var(--Soft-Cyan-Full-Slider-Bar);
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 24px;
+  border: 0;
+  box-shadow: 0px 0px 20px 5px var(--Soft-Cyan-Full-Slider-Bar);
+  background: url('/images/icon-slider.svg') no-repeat, var(--Strong-Cyan-Slider-Backround);
+  cursor: pointer;
+}
+
+.output {
+  display: inline;
+}
+
+#page--views {
+  color: var(--Grayish-Blue-Text);
+  text-transform: uppercase;
+  font-weight: var(--Font-700);
+  order: 1;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+#price {
+  color: var(--Dark-Desaturated-Blue-Text-CTA-Background);
+  font-size: 2rem;
+  font-weight: var(--Font-700);
+}
+.wrapper--price{
+  order: 3;
+}
+#price--month {
+  color: var(--Grayish-Blue-Text);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider--toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: .4s;
+  background-color: var(--Light-Grayish-Blue-Toggle-Background);
+  border-radius: 100%;
+  transition: .4s;
+}
+
+input:checked+.slider--toggle {
+  background-color: var(--Strong-Cyan-Slider-Backround);
+}
+
+.slider--toggle:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider--toggle:before {
+  transform: translate(100%, -50%);
+}
+
+.slider--toggle.round {
+  border-radius: 100px;
+}
+
+.slider--toggle.round:before {
+  border-radius: 50%;
+}
+
+.pc-discount {
+  display: none;
+}
+
+.discount {
+  background-color: var(--Light-Grayish-Red-Discount-Background-);
+  padding: 0.2rem 0.4rem;
+  color: var(--Light-Red-Discount-Text);
+  font-size: 10px;
+  border-radius: 100px;
+}
+
+.features--items img {
+  width: 17px;
+}
+
+.btn {
+  background-color: var(--Dark-Desaturated-Blue-Text-CTA-Background);
+  color: var(--Light-Grayish-Blue-Toggle-Background);
+  font-weight: var(--Font-600);
+  padding: 1rem 4rem;
+  margin: 2rem 0 0;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 100px;
+  transition: opacity 0.2s ease-out;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+/*!-----------------*/
+
+.container {
+
+  text-align: center;
+  padding: 5rem .5rem 15rem;
+  background: url(/images/pattern-circles.svg), url(/images/bg-pattern.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 50px, left;
+  background-size: 200px, cover;
+}
+
+.content {
+  padding: 1rem 1rem;
+}
+
+.content p {
+  width: 70%;
+  line-height: 2;
+  margin: 1rem auto;
+}
+
+.card {
+  background-color: var(--White-Pricing-Component-Background-);
+  border-radius: 10px;
+  width: 90%;
+  position: relative;
+  bottom: 180px;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.075);
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem 0;
+  max-width: 800px;
+}
+.range--wrapper{
+  display: flex;
+  flex-direction: column;
+
+}
+.wrapper--price {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 200px;
+  margin: 1rem auto;
+
+}
+
+.btn--wrapper {
+  margin: 2.5rem 1.3rem;
+  width: 95%;
+  display: flex;
+  font-size: 13px;
+  color: var(--Grayish-Blue-Text);
+  justify-content: space-around;
+  font-weight: var(--Font-700);
+  align-items: center;
+}
+
+.features--items {
+  display: flex;
+  justify-content: space-around;
+  width: 195px;
+  text-align: center;
+  margin: 1rem auto;
+  color: var(--Grayish-Blue-Text);
+}
+
+
+/*todo-------------------------------------------*/
+/*todo-------------------------------------------*/
+/*todo-------------------------------------------*/
+/*todo-------------------------------------------*/
+/*todo-------------------------------------------*/
+/*todo-------------------------------------------*/
+/*todo-------------------------------------------*/
+/*todo-------------------------------------------*/
+/*todo-------------------------------------------*/
+/*todo-------------------------------------------*/
+/*todo-------------------------------------------*/
+/*todo-------------------------------------------*/
+
+
+
+
+@media (min-width:600px) {
+  /*!-----------------*/
+
+  .main-title {
+    font-size: 2.5rem;
+  }
+  .sub-text {
+    font-size: 1.3rem;
+  }
+}

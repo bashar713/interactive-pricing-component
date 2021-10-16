@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive pricing component</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1 class="main-title">Simple, traffic-based pricing</h1>
+      <p class="sub-text">Sign-up for our 30-day trial. No credit card required.</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="top">
+      <div class="range--wrapper">
+        <p id="page--views"></p>
+        <div class="wrapper--price">
+          <span id="price">$<span id="output"></span>.00</span>  <span id="price--month">/ month</span>
+        </div>
+        <input class="slider" id="input" type="range" min="0" value="2" max="4" step="1">
+      </div>
+
+      <div class="btn--wrapper">
+        <span class="span--text">Monthly Billing</span>
+        <label class="switch">
+          <input class="toggle_switch" type="checkbox">
+          <span class="slider--toggle round"></span>
+        </label>
+        <span class="span--text">Yearly Billing <span class="discount">-25% <span class="pc-discount">discount</span></span></span>
+      </div>
+    </div>
+    <hr>
+    <div class="bottom">
+      <div class="features">
+        <div class="features--items">
+          <img src="/images/icon-check.svg" alt="icon-check">
+          <p>Unlimited websites</p>
+        </div>
+        <div class="features--items">
+          <img src="/images/icon-check.svg" alt="icon-check">
+          <p>100% data ownership</p>
+        </div>
+        <div class="features--items">
+          <img src="/images/icon-check.svg" alt="icon-check">
+          <p>Email reports</p>
+        </div>
+        
+       
+      </div>
+      <a href="#" class="btn">Start my trial</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
